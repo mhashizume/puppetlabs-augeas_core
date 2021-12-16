@@ -34,6 +34,7 @@ group :development do
   gem "beaker-module_install_helper",                                            require: false
   gem "beaker-puppet_install_helper",                                            require: false
   gem "nokogiri",                                                                require: false
+  gem "activesupport", '~> 6.1',                                                 require: false
 end
 group :system_tests do
   gem "puppet-module-posix-system-r#{minor_version}", '~> 1.0', require: false, platforms: [:ruby]
