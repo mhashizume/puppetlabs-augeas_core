@@ -9,7 +9,7 @@ on:
 
 jobs:
   release_prep:
-    uses: "mhashizume/cat-github-actions/.github/workflows/module_release_prep.yml@61493e7dd26c81684633e9d0be8a24ca7dba0b53"
+    uses: "mhashizume/cat-github-actions/.github/workflows/module_release_prep.yml@job-level-env"
     with:
       version: "${{ github.event.inputs.version }}"
     secrets: "inherit"
