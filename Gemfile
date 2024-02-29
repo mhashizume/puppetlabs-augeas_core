@@ -32,6 +32,7 @@ group :development do
   gem "simplecov-console", '~> 0.5',                                           require: false
   gem "puppet-debugger", '~> 1.0',                                             require: false
   gem "rubocop", '= 1.48.1',                                                   require: false
+  gem 'rubocop-ast', '= 1.30.0'
   gem "rubocop-performance", '= 1.16.0',                                       require: false
   gem "rubocop-rspec", '= 2.19.0',                                             require: false
   gem "puppet-strings", '~> 4.0',                                              require: false
@@ -40,7 +41,7 @@ group :development do
   gem "beaker-abs", *location_for(ENV['BEAKER_ABS_VERSION'] || '~> 1.0')
   gem "beaker-hostgenerator"
   gem "beaker-rspec"
-  gem "beaker-puppet", *location_for(ENV['BEAKER_PUPPET_VERSION'] || '~> 3.0') if Gem::Requirement.create('< 3.1.0').satisfied_by?(Gem::Version.new(RUBY_VERSION.dup))
+  gem "beaker-puppet", git: 'https://github.com/mhashizume/beaker-puppet', branch: 'readd-agent-dev-methods'
   gem "async", '~> 1',                                                         require: false
   gem "beaker-module_install_helper",                                          require: false
   gem "beaker-puppet_install_helper",                                          require: false
