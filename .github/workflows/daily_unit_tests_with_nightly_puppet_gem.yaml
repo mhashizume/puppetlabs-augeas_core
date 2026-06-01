@@ -8,7 +8,7 @@ on:
 
 jobs:
   daily_unit_tests_with_nightly_puppet_gem:
-    uses: "puppetlabs/phoenix-github-actions/.github/workflows/unit_tests_with_nightly_puppet_gem.yaml@main"
+    uses: "puppetlabs/phoenix-github-actions/.github/workflows/unit_tests_with_nightly_puppet_gem.yaml@c9a6c249486c1d538576dd933180ed48bf548a55"
     secrets: inherit
 
   notify-via-slack:
